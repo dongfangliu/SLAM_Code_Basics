@@ -1,0 +1,7 @@
+project(imagebasics)
+set(CMAKE_CXX_FLAGS "-std=c++11")
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(imagebasics main.cpp)
+target_link_libraries(imagebasics ${OpenCV_LIBS})
+install(TARGETS imagebasics RUNTIME DESTINATION bin)
